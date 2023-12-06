@@ -3,6 +3,7 @@
 
 #include <list>
 #include "types.hpp"
+#include "package.hpp"
 
 class IPackageStockpile {
 public:
