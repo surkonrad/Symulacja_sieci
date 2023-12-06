@@ -1,6 +1,6 @@
 // types.hpp
 #pragma once
 
-#include "package.hpp"
+using ElementID = int;
 
 // Tutaj możesz dodawać inne definicje, aliasy itp., jeśli są potrzebne

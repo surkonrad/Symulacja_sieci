@@ -3,23 +3,27 @@
 
 #include <set>
 #include <iostream>
+#include "types.hpp"
 
 class Package {
+
 public:
-    using ElementID = int; // Przykładowy typ, dostosuj go do swoich potrzeb
+    Package();
+
+    explicit Package(ElementID ID) : ID_(ID) { assigned_IDs.insert(ID_); }
+
+    Package(Package &&package)  noexcept : ID_(package.ID_) {}
+
+    Package &operator=(Package &&package) noexcept ;
+
+    ElementID get_id() const { return ID_; }
+
+    ~Package();
 
 private:
     static std::set<ElementID> assignedIDs;
     static std::set<ElementID> freedIDs;
 
-    ElementID id;
-
-public:
-    Package();
-
-    ~Package();
-
-    ElementID getID() const;
-
     // Dodatkowe metody i pola wg potrzeb
 };
+
