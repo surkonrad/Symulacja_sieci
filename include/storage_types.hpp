@@ -1,4 +1,3 @@
-// storage_types.hpp
 #pragma once
 
 #include <list>
