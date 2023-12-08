@@ -1,0 +1,3 @@
+C:/Users/micha/Symulacja_sieci/Wezly/cmake-build-debug/CMakeFiles/Wezly.dir
+C:/Users/micha/Symulacja_sieci/Wezly/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/micha/Symulacja_sieci/Wezly/cmake-build-debug/CMakeFiles/rebuild_cache.dir
