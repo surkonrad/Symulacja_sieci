@@ -1,10 +1,17 @@
 // types.hpp
-#pragma once
 
-#include <cstdint>
-#include <functional>
+#ifndef NETSIM_TYPES_HPP
+#define NETSIM_TYPES_HPP
 
-using ElementID = uint64_t;
-using Time = uint64_t;
-using TimeOffset = int64_t;
+#include <list>
+#include "package.hpp"
+
+using size_type=std::size_t;
+using ElementID = unsigned int;
+using Time = int;
+using TimeOffset = int;
 using ProbabilityGenerator = std::function<double()>;
+
+#endif
+
+// Tutaj możesz dodawać inne definicje, aliasy itp., jeśli są potrzebne

@@ -1,36 +1,29 @@
-// storage_types.cpp
-#include "storage_types.hpp"
+Package PackageQueue::pop() {
+    Package package_to_pop;
 
-PackageQueue::PackageQueue(PackageQueueType type) : type_(type) {}
+    switch (packageQueueType) {
+        case PackageQueueType::LIFO:
+            package_to_pop = std::move(package_list.front());
+            package_list.pop_front();
+            break;
+
+        case PackageQueueType::FIFO:
+            package_to_pop = std::move(package_list.back());
+            package_list.pop_back();
+            break;
+    }
+    return package_to_pop;
+}
 
 void PackageQueue::push(Package&& package) {
-    packages_.emplace_back(std::move(package));
-}
-
-bool PackageQueue::empty() const {
-    return packages_.empty();
-}
-
-Package PackageQueue::pop() {
-    if (type_ == PackageQueueType::FIFO) {
-        Package front = std::move(packages_.front());
-        packages_.pop_front();
-        return front;
-    } else {
-        Package back = std::move(packages_.back());
-        packages_.pop_back();
-        return back;
-    }
-}
-
-const Package& PackageQueue::peek() const {
-    if (type_ == PackageQueueType::FIFO) {
-        return packages_.front();
-    } else {
-        return packages_.back();
-    }
+    package_list.emplace_back(std::move(package));
+    // Done :)
 }
 
 PackageQueueType PackageQueue::get_queue_type() const {
-    return type_;
+    return packageQueueType;
+}
+
+size_type PackageQueue::size() const {
+    return package_list.size();
 }

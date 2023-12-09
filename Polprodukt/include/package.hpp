@@ -1,4 +1,6 @@
-#pragma once
+#ifndef NETSIM_PACKAGE_HPP
+#define NETSIM_PACKAGE_HPP
+
 
 #include <set>
 #include "types.hpp"
@@ -8,20 +10,20 @@ class Package {
 public:
     Package();
 
-    explicit Package(ElementID ID);
 
-    Package(Package &&package) noexcept;
-
-    Package &operator=(Package &&package) noexcept;
-
-    ElementID get_id() const;
+    Package(ElementID ID) : ID_(ID){}
+    Package(Package&& other) noexcept;
+    Package& operator=(Package&& other) noexcept;
 
     ~Package();
 
+    ElementID get_id() const {return ID_;}
+
 private:
+    ElementID ID_;
     static std::set<ElementID> assignedIDs;
     static std::set<ElementID> freedIDs;
 
-    ElementID ID_; // Poprawa: dodanie pola ID_
-};
 
+};
+#endif
