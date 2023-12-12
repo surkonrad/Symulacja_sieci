@@ -2,28 +2,24 @@
 #define NETSIM_PACKAGE_HPP
 
 
-#include <set>
 #include "types.hpp"
-#include <iostream>
+#include <set>
 
 class Package {
-public:
+public :
+
+
     Package();
-
-
     Package(ElementID ID) : ID_(ID){}
     Package(Package&& other) noexcept;
     Package& operator=(Package&& other) noexcept;
-
     ~Package();
 
     ElementID get_id() const {return ID_;}
-
 private:
     ElementID ID_;
-    static std::set<ElementID> assignedIDs;
-    static std::set<ElementID> freedIDs;
-
-
+    static std::set<ElementID> assigned_IDs;
+    static std::set<ElementID> freed_IDs;
 };
+
 #endif

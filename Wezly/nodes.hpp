@@ -3,6 +3,10 @@
 
 #include "package.hpp"
 #include "storage_types.hpp"
+#include <memory>
+#include <map>
+
+
 
 class IPackageReceiver {
 public:
@@ -11,6 +15,7 @@ public:
     virtual const Package& view_package() const = 0;
     virtual bool has_package() const = 0;
     virtual ElementID get_id() const = 0;
+
 };
 
 class Storehouse : public IPackageReceiver {
@@ -28,7 +33,7 @@ private:
 
 class ReceiverPreferences {
 public:
-    ReceiverPreferences(ProbabilityGenerator probability_generator = probability_generator_default);
+    ReceiverPreferences(ProbabilityGenerator probability_generator);
     void add_receiver(IPackageReceiver* receiver, double probability);
     void remove_receiver(IPackageReceiver* receiver);
     IPackageReceiver* choose_receiver();
@@ -49,15 +54,15 @@ protected:
 
 class Ramp : public PackageSender {
 public:
-    Ramp(ElementID id, TimeOffset delivery_interval, ProbabilityGenerator probability_generator = probability_generator_default);
+    Ramp(ElementID id, TimeOffset delivery_interval, ProbabilityGenerator probability_generator);
     void deliver_goods(Time t);
 
 private:
     ElementID id_;
     TimeOffset delivery_interval_;
     Time last_delivery_time_;
-    ProbabilityGenerator probability_generator_default = []() { return 0.0; };
-    ProbabilityGenerator probability_generator;
+    ProbabilityGenerator probability_generator = []() { return 0.0; };
+
 };
 
 class Worker : public PackageSender {

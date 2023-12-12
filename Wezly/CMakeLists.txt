@@ -12,4 +12,5 @@ add_executable(Wezly
         package.hpp
         storage_types.cpp
         storage_types.hpp
-        types.hpp nodes.cpp)
+        types.hpp nodes.cpp helpers.cpp
+	main.cpp)
