@@ -1,8 +1,3 @@
-//
-// Created by peter on 19.12.2021.
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git
-
 #include "nodes.hpp"
 
 #include <utility>
@@ -127,6 +122,3 @@ void Worker::do_work(Time t) {
         }
     }
 }
-
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git

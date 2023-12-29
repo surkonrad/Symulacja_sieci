@@ -1,6 +1,3 @@
-//
-// Created by peter on 19.12.2021.
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git
 #include "package.hpp"
 
 std::set<ElementID> Package::assigned_IDs = {};
@@ -35,6 +32,3 @@ Package::~Package() {
     freed_IDs.insert(ID_);
     assigned_IDs.erase(ID_);
 }
-
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git

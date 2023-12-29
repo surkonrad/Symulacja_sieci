@@ -1,7 +1,3 @@
-//
-// Created by peter on 19.12.2021.
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git
 #include "storage_types.hpp"
 
 PackageQueue::PackageQueue(PackageQueueType package_queue_type) {
@@ -55,5 +51,3 @@ std::size_t PackageQueue::size() {
 
     return size_of_container;
 }
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git

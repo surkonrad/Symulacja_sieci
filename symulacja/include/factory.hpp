@@ -1,8 +1,3 @@
-//
-// Created by peter on 19.12.2021.
-//
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git
 #ifndef SIECI_FACTORY_HPP
 #define SIECI_FACTORY_HPP
 
@@ -134,5 +129,3 @@ void Factory::remove_receiver(NodeCollection<Node>& collection, ElementID id) {
 }
 
 #endif //SIECI_FACTORY_HPP
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git

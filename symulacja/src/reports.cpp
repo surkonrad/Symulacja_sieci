@@ -1,7 +1,3 @@
-//
-// Created by peter on 19.12.2021.
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git
 #include <reports.hpp>
 
 void generate_structure_report(const Factory& f, std::ostream& os) {
@@ -113,5 +109,3 @@ bool SpecificTurnsReportNotifier::should_generate_report(Time t) {
     }
     return false;
 }
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git

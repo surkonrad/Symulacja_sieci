@@ -1,7 +1,3 @@
-//
-// Created by peter on 19.12.2021.
-//
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git
 #ifndef SIECI_REPORTS_HPP
 #define SIECI_REPORTS_HPP
 
@@ -27,5 +23,3 @@ private:
 };
 
 #endif //SIECI_REPORTS_HPP
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git

@@ -1,7 +1,3 @@
-//
-// Created by peter on 19.12.2021.
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git
 #include "simulation.hpp"
 
 void simulate(Factory & f, TimeOffset d, std::function<void(Factory&, Time)> rf) {
@@ -16,5 +12,3 @@ void simulate(Factory & f, TimeOffset d, std::function<void(Factory&, Time)> rf)
     else
         throw std::logic_error("Factory structure inconsistent");
 }
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git

@@ -1,6 +1,3 @@
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git
-
 #include "factory.hpp"
 #include "nodes.hpp"
 #include <stdexcept>
@@ -241,6 +238,3 @@ void save_factory_structure(Factory & factory, std::ostream & os) {
     }
     os.flush();
 }
-
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git

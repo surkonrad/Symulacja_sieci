@@ -1,7 +1,3 @@
-//
-// Created by peter on 19.12.2021.
-//
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git
 #ifndef SIECI_TYPES_HPP
 #define SIECI_TYPES_HPP
 
@@ -14,5 +10,3 @@ using TimeOffset = int;
 using ProbabilityGenerator = std::function<double()>;
 
 #endif //SIECI_TYPES_HPP
-
-//URL repozytorium: https://github.com/PiotrWolnik/NetSim.git
